@@ -83,4 +83,8 @@
     name = "Fabulous Secret Powers",
     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Fabulous%20Secret%20Powers.table?raw=true",
   },
+  {
+    name = "Smells Like Teen Spirit",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Smells%20Like%20Teen%20Spirit.table?raw=true",
+  },
 }
