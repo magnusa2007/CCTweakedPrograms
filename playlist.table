@@ -21,7 +21,7 @@
   },
   {
     name = "Can't Get Enough Of Your Love",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Can't%20Get%20Enough%20Of%20Your Love.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Can't%20Get%20Enough%20Of%20Your%20Love.table?raw=true",
   },
   {
     name = "Don't Let Me Down",
@@ -81,6 +81,6 @@
   },
   {
     name = "Fabulous Secret Powers",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Fabulous Secret Powers.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Fabulous%20Secret%20Powers.table?raw=true",
   },
 }
