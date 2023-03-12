@@ -51,4 +51,32 @@
     name = "Living On My Own",
     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Living%20On%20My%20Own.table?raw=true",
   },
+  {
+    name = "Pray",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Pray.table",
+  },
+  {
+    name = "Relax",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Relax.table",
+  },
+  {
+    name = "Sally Comes Around",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Sally%20Comes%20Around.table",
+  },
+  {
+    name = "The Ones You Love",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/The%20Ones%20You%20Love.table",
+  },
+  {
+    name = "Walk Through The World",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Walk%20Through%20The%20World.table?raw=true",
+  },
+  {
+    name = "What's Up",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/What's%20Up.table?raw=true",
+  },
+  {
+    name = "Wild World",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Wild%20World.table",
+  },
 }
