@@ -13,7 +13,7 @@ while true do
     mon.write("< x >")
  
     event, side, x, y = os.pullEvent("monitor_touch")
-    print("event: "..event.. "x,y "..x..","..y)
+    --print("event: "..event.. "x,y "..x..","..y)
     if y == 2 then
         if x == 7 and song > 1 then
             song = song-1
@@ -26,9 +26,8 @@ while true do
 				rs.setOutput("top",true)         
 				shell.run("bg","player.lua", songlist[song].song)
                 playing = true
-				--print("on")
+
 			end
-		--print(fs.open("playing","r").readLine())
         elseif x == 11 and song < #songlist then
             song = song+1
         end   
