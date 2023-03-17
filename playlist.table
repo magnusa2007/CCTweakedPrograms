@@ -1,90 +1,90 @@
 {
   {
     name = "Be Prepared",
-    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/Benjy.table",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/data/main/Benjy.dfpwm",
   },
   {
     name = "Never gonna give you up",
-    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/Rick.table",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Rick.dfpwm",
   },
   {
     name = "(I Can't Help) Falling In Love With You",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/raw/main/data/(I%20Can't%20Help)%20Falling%20In%20Love%20With%20You.table",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/raw/main/data/(I%20Can't%20Help)%20Falling%20In%20Love%20With%20You.dfpwm",
   },
   {
     name = "A Place To Turn",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/A%20Place%20To%20Turn.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/A%20Place%20To%20Turn.dfpwm?raw=true",
   },
   {
     name = "Ain't Nothin' You Can Do",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Ain't%20Nothin'%20You%20Can%20Do.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Ain't%20Nothin'%20You%20Can%20Do.dfpwm?raw=true",
   },
   {
     name = "Can't Get Enough Of Your Love",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Can't%20Get%20Enough%20Of%20Your%20Love.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Can't%20Get%20Enough%20Of%20Your%20Love.dfpwm?raw=true",
   },
   {
     name = "Don't Let Me Down",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Don't%20Let%20Me%20Down.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Don't%20Let%20Me%20Down.dfpwm?raw=true",
   },
   {
     name = "Follow The Midnight Sun",
-    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Follow%20The%20Midnight%20Sun.table",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Follow%20The%20Midnight%20Sun.dfpwm",
   },
   {
     name = "Go West",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Go%20West.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Go%20West.dfpwm?raw=true",
   },
   {
     name = "Hero",
-    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Hero.table",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Hero.dfpwm",
   },
   {
     name = "I'd Do Anything For Love (But I Won't Do That)",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/I'd%20Do%20Anything%20For%20Love%20(But%20I%20Won't%20Do%20That).table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/I'd%20Do%20Anything%20For%20Love%20(But%20I%20Won't%20Do%20That).dfpwm?raw=true",
   },
   {
     name = "Kiss That Frog",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Kiss%20That%20Frog.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Kiss%20That%20Frog.dfpwm?raw=true",
   },
   {
     name = "Living On My Own",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Living%20On%20My%20Own.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Living%20On%20My%20Own.dfpwm?raw=true",
   },
   {
     name = "Pray",
-    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Pray.table",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Pray.dfpwm",
   },
   {
     name = "Relax",
-    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Relax.table",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Relax.dfpwm",
   },
   {
     name = "Sally Comes Around",
-    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Sally%20Comes%20Around.table",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Sally%20Comes%20Around.dfpwm",
   },
   {
     name = "The Ones You Love",
-    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/The%20Ones%20You%20Love.table",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/The%20Ones%20You%20Love.dfpwm",
   },
   {
     name = "Walk Through The World",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Walk%20Through%20The%20World.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Walk%20Through%20The%20World.dfpwm?raw=true",
   },
   {
     name = "What's Up",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/What's%20Up.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/What's%20Up.dfpwm?raw=true",
   },
   {
     name = "Wild World",
-    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Wild%20World.table",
+    song = "https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/data/Wild%20World.dfpwm",
   },
   {
     name = "Fabulous Secret Powers",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Fabulous%20Secret%20Powers.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Fabulous%20Secret%20Powers.dfpwm?raw=true",
   },
   {
     name = "Smells Like Teen Spirit",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Smells%20Like%20Teen%20Spirit.table?raw=true",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Smells%20Like%20Teen%20Spirit.dfpwm?raw=true",
   },
 }
