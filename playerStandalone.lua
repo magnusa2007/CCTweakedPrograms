@@ -1,21 +1,24 @@
-url = "https://github.com/magnusa2007/CCTweakedPrograms/raw/main/data/Pray.table" 
-local function  play()
-	local dfpwm = require("cc.audio.dfpwm")
-	local speaker = peripheral.find("speaker")
-	local decoder = dfpwm.make_decoder()
-	local file = http.get(url)
-	local data = file.readAll()
-	file.close()
-	song = textutils.unserialize(data)
+url = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Smells%20Like%20Teen%20Spirit.dfpwm?raw=true"
+x = 1
+file = http.get(url).readAll()
+byte = 16*1024
+line = string.sub(file,(x-1)*byte+1,byte+(byte)*(x-1))
 
+local dfpwm = require("cc.audio.dfpwm")
+local speaker = peripheral.find("speaker")
 
-	for i = 1,#song do
-		local buffer = decoder(song[i])
+local decoder = dfpwm.make_decoder()
+temp = true
+function play()
+	while not (line=="") do
+		buffer = decoder(line)
 
 		while not speaker.playAudio(buffer) do
-			
 			os.pullEvent("speaker_audio_empty")
 		end
+		x=x+1
+		line = string.sub(file,(x-1)*byte+1,byte+(byte)*(x-1))
+
 	end
 end
 play()
