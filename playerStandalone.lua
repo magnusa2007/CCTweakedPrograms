@@ -1,3 +1,4 @@
+--encoder https://music.madefor.cc/
 url = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Smells%20Like%20Teen%20Spirit.dfpwm?raw=true"
 x = 1
 file = http.get(url).readAll()
