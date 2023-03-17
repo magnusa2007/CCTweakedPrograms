@@ -1,3 +1,4 @@
+--2.0v
 mon = peripheral.find("monitor")
 speaker = peripheral.find("speaker")
 songlist = textutils.unserialize(http.get("https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/playlist.table").readAll())
