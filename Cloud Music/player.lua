@@ -3,7 +3,6 @@ rs.setOutput("top",true)
 x = 1
 url = input[1]
 file = textutils.unserialise(http.get(url).readAll())
-byte = 16*1024
 
 local dfpwm = require("cc.audio.dfpwm")
 local speaker = peripheral.find("speaker")
