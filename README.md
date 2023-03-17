@@ -5,6 +5,6 @@ list of programs
 1. Cloud Music
 
 #Cloud Music
-Needs 2 advanced monitors + speaker + advanced computer
+Needs 2 advanced monitors + speaker + advanced computer\n
 Run "wget https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/Cloud%20Music/startup.lua startup"
 Then run startup
