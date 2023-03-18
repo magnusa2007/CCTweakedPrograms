@@ -1,11 +1,15 @@
---Version 2.4
+--Version 2.5
 mon = peripheral.find("monitor")
 speaker = peripheral.find("speaker")
-songlist = textutils.unserialize(http.get("https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/playlist.table").readAll())
+if fs.exists("playlist.table") then
+	songlist = textutils.unserialize(fs.open("playlist.tabel","rb").readAll())
+else
+	songlist = textutils.unserialize(http.get("https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/playlist.table").readAll())
+end
 song = 1
 width, height = mon.getSize()
 n=1
-os.startTimer(0.1)
+os.startTimer(0.25)
 p="-"
 rs.setOutput("top",false)
 
