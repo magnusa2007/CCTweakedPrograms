@@ -1,4 +1,4 @@
---Version 2.62
+--Version 2.63
 --Made by MagBot
 --https://github.com/magnusa2007/CCTweakedPrograms
 mon = peripheral.find("monitor")
