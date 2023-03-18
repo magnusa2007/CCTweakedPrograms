@@ -1,4 +1,4 @@
---Version 2.64
+--Version 2.65
 --Made by MagBot
 --https://github.com/magnusa2007/CCTweakedPrograms
 mon = peripheral.find("monitor")
@@ -76,6 +76,6 @@ while true do
 		os.startTimer(0.5)
 	end
 	if multishell.getCount() == 1 and rs.getOutput("top") then
-	shell.run("bg","player.lua", songlist[pl][song].song)
+	shell.run("fg","player.lua", songlist[pl][song].song)
 	end
 end
