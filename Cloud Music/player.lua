@@ -1,5 +1,5 @@
 input = {...}
-rs.setOutput("top",true)
+--rs.setOutput("top",true)
 x = 1
 url = input[1]
 file = http.get(url, nil, true).readAll()
@@ -31,4 +31,9 @@ function play()
 	end
 end
 play()
+
+for i, speaker in next, speakers do
+	speaker.stop()
+end
+
 
