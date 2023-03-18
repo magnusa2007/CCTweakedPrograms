@@ -1,4 +1,4 @@
---Version 2.63
+--Version 2.64
 --Made by MagBot
 --https://github.com/magnusa2007/CCTweakedPrograms
 mon = peripheral.find("monitor")
@@ -54,7 +54,8 @@ while true do
 
 				else
 					rs.setOutput("top",true)         
-					shell.run("fg","player.lua", songlist[pl][song].song)
+					
+					--print(songlist[pl][song].song)
 				end
 			elseif x == 14 and song < #songlist[pl] then
 				song = song+1
@@ -73,5 +74,8 @@ while true do
 	if event[1] == "timer" then
 		n=n+1
 		os.startTimer(0.5)
+	end
+	if multishell.getCount() == 1 and rs.getOutput("top") then
+	shell.run("bg","player.lua", songlist[pl][song].song)
 	end
 end
