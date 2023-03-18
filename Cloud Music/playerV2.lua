@@ -5,7 +5,7 @@ songlist = textutils.unserialize(http.get("https://raw.githubusercontent.com/mag
 song = 1
 width, height = mon.getSize()
 n=1
-os.startTimer(0.25)
+os.startTimer(0.1)
 p="-"
 rs.setOutput("top",false)
 
