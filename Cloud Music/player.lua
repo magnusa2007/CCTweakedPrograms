@@ -35,5 +35,5 @@ play()
 for i, speaker in next, speakers do
 	speaker.stop()
 end
-
+shell.exit
 
