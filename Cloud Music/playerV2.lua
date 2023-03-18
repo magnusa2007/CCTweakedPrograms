@@ -32,9 +32,9 @@ while true do
 		p=  "-"
 	end
 	mon.write(p)
-	mon.setCursorPos(1, 3)
-	mon.write("Playlist <   >")
 	mon.setCursorPos(1, 4)
+	mon.write("Playlist <   >")
+	mon.setCursorPos(1, 5)
 	mon.write(songlist[pl].name)
 	
     event = {os.pullEvent()}
@@ -58,7 +58,7 @@ while true do
 				song = song+1
 				n=1
 			end   
-		elseif y==3 then
+		elseif y==4 then
 			if x == 10 and pl > 1 then
 				pl = pl-1
 			elseif x == 14 and pl < #songlist then
