@@ -10,15 +10,15 @@ Run "wget https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/C
 Then run "startup"
 You can also add custom playlists by making a "playlist.table" and add something like this <br>
  <div class="table" style="height:200px;">
-  {
-   {
-     name = "(I Can't Help) Falling In Love With You",
-      song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/(I%20Can't%20Help)%20Falling%20In%20Love%20With%20You.dfpwm?raw=true",
-   },
-   {
-      name = "A Place To Turn",
-     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/A%20Place%20To%20Turn.dfpwm?raw=true",
-   },
-   {
-  }
+  {<br>
+   {<br>
+     name = "(I Can't Help) Falling In Love With You",<br>
+      song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/(I%20Can't%20Help)%20Falling%20In%20Love%20With%20You.dfpwm?raw=true",<br>
+   },<br>
+   {<br>
+      name = "A Place To Turn",<br>
+     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/A%20Place%20To%20Turn.dfpwm?raw=true",<br>
+   },<br>
+   {<br>
+  }<br>
 </div>
