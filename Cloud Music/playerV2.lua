@@ -1,4 +1,6 @@
 --Version 2.62
+--Made by MagBot
+--https://github.com/magnusa2007/CCTweakedPrograms
 mon = peripheral.find("monitor")
 speaker = peripheral.find("speaker")
 if fs.exists("playlist.table") then
