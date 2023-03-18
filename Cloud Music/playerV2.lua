@@ -19,7 +19,7 @@ while true do
     mon.clear()
     mon.setCursorPos(1,1)
 	if #songlist[pl][song].name>width then
-		mon.write(songlist[pl][song].name:sub(n,n+width).." | "..songlist[song].name)
+		mon.write(songlist[pl][song].name:sub(n,n+width).." | "..songlist[pl][song].name)
 	else
 		mon.write(songlist[pl][song].name)
 	end
