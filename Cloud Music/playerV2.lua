@@ -54,7 +54,7 @@ while true do
 
 				else
 					rs.setOutput("top",true)         
-					shell.run("bg","player.lua", songlist[pl][song].song)
+					shell.run("fg","player.lua", songlist[pl][song].song)
 				end
 			elseif x == 14 and song < #songlist[pl] then
 				song = song+1
