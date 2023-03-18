@@ -1,5 +1,6 @@
 {
-  {
+	{
+	{
     name = "(I Can't Help) Falling In Love With You",
     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/(I%20Can't%20Help)%20Falling%20In%20Love%20With%20You.dfpwm?raw=true",
   },
@@ -16,16 +17,8 @@
     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Can't%20Get%20Enough%20Of%20Your%20Love.dfpwm?raw=true",
   },
   {
-    name = "Council Anthem",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Council%20Anthem%20(1).dfpwm?raw=true",
-  },
-  {
     name = "Don't Let Me Down",
     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Don't%20Let%20Me%20Down.dfpwm?raw=true",
-  },
-  {
-    name = "Fabulous Secret Powers",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Fabulous%20Secret%20Powers.dfpwm?raw=true",
   },
   {
     name = "Follow The Midnight Sun",
@@ -64,10 +57,6 @@
     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Relax.dfpwm?raw=true",
   },
   {
-    name = "Rick",
-    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Rick.dfpwm?raw=true",
-  },
-  {
     name = "Sally Comes Around",
     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Sally%20Comes%20Around.dfpwm?raw=true",
   },
@@ -87,4 +76,26 @@
     name = "Wild World",
     song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Wild%20World.dfpwm?raw=true",
   },
+	name = "Absulte music"
+	},
+	{
+	{
+    name = "Never Gonna give you up",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Rick.dfpwm?raw=true",
+	},
+	  {
+    name = "Smells Like Teen Spirit",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Nirvana%20-%20Smells%20Like%20Teen%20Spirit%20(Official%20Music%20Video).dfpwm?raw=true",
+  },
+  {
+    name = "Council Anthem",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Council%20Anthem%20(1).dfpwm?raw=true",
+  },
+  {
+    name = "Be Prepared",
+    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Benjy%20Gaither%20-%20Be%20Prepared%20%204K%20432%20Hz.dfpwm?raw=true",
+  },
+	name = "Random"
+	}
+
 }
