@@ -1,3 +1,5 @@
+--Made by MagBot
+--https://github.com/magnusa2007/CCTweakedPrograms
 input = {...}
 --rs.setOutput("top",true)
 x = 1
