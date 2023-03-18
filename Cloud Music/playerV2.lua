@@ -2,7 +2,7 @@
 mon = peripheral.find("monitor")
 speaker = peripheral.find("speaker")
 if fs.exists("playlist.table") then
-	songlist = textutils.unserialize(fs.open("playlist.tabel","rb").readAll())
+	songlist = textutils.unserialize(fs.open("playlist.table","rb").readAll())
 else
 	songlist = textutils.unserialize(http.get("https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/playlist.table").readAll())
 end
