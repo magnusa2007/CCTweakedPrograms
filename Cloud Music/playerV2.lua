@@ -1,4 +1,4 @@
---Version 2.61
+--Version 2.62
 mon = peripheral.find("monitor")
 speaker = peripheral.find("speaker")
 if fs.exists("playlist.table") then
