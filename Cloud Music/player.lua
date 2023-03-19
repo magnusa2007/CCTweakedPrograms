@@ -1,7 +1,7 @@
 --Made by MagBot
 --https://github.com/magnusa2007/CCTweakedPrograms
 input = {...}
---rs.setOutput("top",true)
+rs.setOutput("top",true)
 x = 1
 url = input[1]
 file = http.get(url, nil, true).readAll()

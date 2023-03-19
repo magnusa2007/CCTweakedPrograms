@@ -1,27 +1,45 @@
---Version 2.65
+--Version 2.7
 --Made by MagBot
 --https://github.com/magnusa2007/CCTweakedPrograms
-mon = peripheral.find("monitor")
-speaker = peripheral.find("speaker")
+per = peripheral.getNames()
+mon = term
+speaker = true
+TouchEvent = "mouse_click"
+tabs = "bg"
+for i=1,#per do
+	perT =  peripheral.getType(per[i])
+	if perT == "monitor" then
+		mon = peripheral.find("monitor")
+		TouchEvent = "monitor_touch"
+		tabs = "fg"
+	elseif perT == "speaker" then
+		speaker = false
+	end
+end
+
+if speaker then print("No speaker found") end
+
 if fs.exists("playlist.table") then
 	print("Found custom playlist")
 	songlist = textutils.unserialize(fs.open("playlist.table","rb").readAll())
 else
 	songlist = textutils.unserialize(http.get("https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/playlist.table").readAll())
 end
+
 song = 1
 width, height = mon.getSize()
 n=1
-os.startTimer(0.25)
+timer = os.startTimer(0.25)
 p="-"
 rs.setOutput("top",false)
 pl = 1
+loop = true
 while true do
 	
     mon.clear()
     mon.setCursorPos(1,1)
 	if #songlist[pl][song].name>width then
-		mon.write(songlist[pl][song].name:sub(n,n+width).." | "..songlist[pl][song].name)
+		mon.write((songlist[pl][song].name.." | "..songlist[pl][song].name):sub(n,n+width))
 	else
 		mon.write(songlist[pl][song].name)
 	end
@@ -29,19 +47,26 @@ while true do
     mon.write("<   >")
 	mon.setCursorPos(12, 2)
 	if rs.getOutput("top") then
-		p  =  "+"
+		p =  "+"
 	else
-		p=  "-"
+		p =  "-"
 	end
 	mon.write(p)
 	mon.setCursorPos(1, 4)
 	mon.write("Playlist <   >")
+	mon.setCursorPos(12, 4)
+	if loop then
+		p =  "+"
+	else
+		p =  "-"
+	end
+	mon.write(p)
 	mon.setCursorPos(1, 5)
 	mon.write(songlist[pl].name)
 	
     event = {os.pullEvent()}
 	--print(textutils.serialize(event))
-	if event[1] == "monitor_touch" then
+	if event[1] == TouchEvent then
 		x=event[3]
 		y=event[4]
 		if y == 2 then
@@ -53,8 +78,8 @@ while true do
 					rs.setOutput("top",false)
 
 				else
-					rs.setOutput("top",true)         
 					
+					shell.run(tabs,"player.lua", songlist[pl][song].song)
 					--print(songlist[pl][song].song)
 				end
 			elseif x == 14 and song < #songlist[pl] then
@@ -64,18 +89,26 @@ while true do
 		elseif y==4 then
 			if x == 10 and pl > 1 then
 				pl = pl-1
+			elseif x == 12 then
+				loop = not loop
 			elseif x == 14 and pl < #songlist then
 				pl = pl+1
 			end
 		end
+		os.cancelTimer(timer)
+		timer = os.startTimer(0.25)
 	end
 	
-	if n>#songlist[pl][song].name+3 then n=1 end
+	if n>#songlist[pl][song].name+3 then --bug location
+		n=1 
+	end
 	if event[1] == "timer" then
 		n=n+1
-		os.startTimer(0.5)
+		timer = os.startTimer(0.5)
 	end
-	if multishell.getCount() == 1 and rs.getOutput("top") then
-	shell.run("fg","player.lua", songlist[pl][song].song)
+	if multishell.getCount() == 1 and rs.getOutput("top") and loop == true then
+		shell.run(tabs,"player.lua", songlist[pl][song].song)
+	elseif multishell.getCount() == 1 and rs.getOutput("top") and loop == false then
+		rs.setOutput("top",false)
 	end
 end
