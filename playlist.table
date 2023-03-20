@@ -95,6 +95,14 @@
       name = "Be Prepared",
       song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Benjy%20Gaither%20-%20Be%20Prepared%20%204K%20432%20Hz.dfpwm?raw=true",
     },
+    {
+      name = "Fabulous Secret Power",
+      song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Fabulous%20Secret%20Powers.dfpwm?raw=true",
+    },
+    {
+      name = "Da Coconut Nut",
+      song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Da%20Coconut%20Nut.dfpwm?raw=true,
+    },
     name = "Other",
   },
   {
