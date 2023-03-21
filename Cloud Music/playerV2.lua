@@ -1,4 +1,4 @@
---Version 2.78
+--Version 2.79
 --Made by MagBot
 --https://github.com/magnusa2007/CCTweakedPrograms
 per = peripheral.getNames()
@@ -122,6 +122,7 @@ while true do
 
 	if multishell.getCount() == 1 and rs.getOutput("top") and loop == true then
 		song = song + 1
+		shell.run(tabs,"player.lua", songlist[pl][song].song)
 	elseif multishell.getCount() == 1 and rs.getOutput("top") and loop == false then
 		shell.run(tabs,"player.lua", songlist[pl][song].song)
 	end
