@@ -1,8 +1,8 @@
---Version 2.8
+--Version 2.81
 --Made by MagBot
 --https://github.com/magnusa2007/CCTweakedPrograms
 per = peripheral.getNames()
-mon = table.pack(term)
+monitor = table.pack(term)
 speaker = true
 TouchEvent = "mouse_click"
 tabs = "bg"
@@ -34,22 +34,25 @@ p="-"
 rs.setOutput("top",false)
 pl = 1
 loop = true
-
-function mon.clear()
+mon = {}
+function clear()
 	for i=1,monitor.n do
 		monitor[i].clear()
 	end
 end
-function mon.write(text)
+function twrite(text)
 	for i=1,monitor.n do
 		monitor[i].write(text)
 	end
 end
-function mon.setCursorPos(x,y)
+function setCursorPos(x,y)
 	for i=1,monitor.n do
 		monitor[i].setCursorPos(x,y)
 	end
 end
+mon.clear = clear
+mon.write = twrite
+mon.setCursorPos = setCursorPos
 
 while true do
 	
