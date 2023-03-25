@@ -8,5 +8,5 @@ List of programs
 Needs 2 advanced monitors or more + speaker + advanced computer <br>
 Run "wget https://raw.githubusercontent.com/magnusa2007/CCTweakedPrograms/main/Cloud%20Music/startup.lua startup"  <br>
 Then run "startup"
-You can also add custom playlists by making a "playlist.table" and add something like this.
+You can also add custom playlists by making a "playlist.table" and add something like this. use [encoder](https://music.madefor.cc/) to encode it 
 [example.table](https://github.com/magnusa2007/CCTweakedPrograms/blob/main/example.table)
