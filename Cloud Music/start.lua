@@ -28,4 +28,5 @@ else
 	print("Downloading")
 	download()
 	print("Done")
+	shell.run("playerV2.lua")
 end
