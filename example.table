@@ -8,7 +8,7 @@
    name = "A Place To Turn",
    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/A%20Place%20To%20Turn.dfpwm?raw=true",
   },
-  name = "Absolute Music 4"
+  name = "Album name 1"
  },
  {
   {
@@ -19,7 +19,7 @@
    name = "Smells Like Teen Spirit",
    song = "https://github.com/magnusa2007/CCTweakedPrograms/blob/main/data/Nirvana%20-%20Smells%20Like%20Teen%20Spirit%20(Official%20Music%20Video).dfpwm?raw=true",
   },
-  name = "Other"
+  name = "Random songs"
  }
 }
 
