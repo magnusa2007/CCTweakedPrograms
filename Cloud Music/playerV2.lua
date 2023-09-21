@@ -1,4 +1,4 @@
---Version 2.81
+--Version 2.82
 --Made by MagBot
 --https://github.com/magnusa2007/CCTweakedPrograms
 per = peripheral.getNames()
@@ -132,7 +132,7 @@ while true do
 	if pl > #songlist+0.1  then pl = 1 
 	elseif pl < 0.9 then pl = songlist end
 	if song > #songlist[pl]+0.1  then song = 1 
-	elseif song < 0.9 then song = songlist[pl] end
+	elseif song < 0.9 then song = #songlist[pl] end
 
 	if n>#songlist[pl][song].name+3 then --bug location
 		n=1 
