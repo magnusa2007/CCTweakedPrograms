@@ -364,4 +364,19 @@
     },
     name = "Portal 2 OST",
   },
+  {
+    name = "Temporal",
+    {
+      name = "A Madmans Lullaby",
+      song = "https://github.com/magnusa2007/CCTweakedPrograms/raw/main/data/Temporal/a_madmans_lullaby.dfpwm"
+    },
+    {
+      name = "Fallen Flame",
+      song = "https://github.com/magnusa2007/CCTweakedPrograms/raw/main/data/Temporal/fallen_flame.dfpwm"
+    },
+    {
+      name = "Hold Strong",
+      song = "https://github.com/magnusa2007/CCTweakedPrograms/raw/main/data/Temporal/hold_strong.dfpwm"
+    }
+  }
 }
