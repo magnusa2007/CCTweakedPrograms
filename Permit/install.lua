@@ -40,10 +40,10 @@ if list["Disk Drive"] then
     print("Move to Disk Drive?")
     if read() == "yes" then
         if fs.exists("keyboard.lua") then
-            fs.move("keyboard.lua","disk")
+            fs.move("keyboard.lua","disk/keyboard.lua")
         end
         if fs.exists("startup.lua") then
-            fs.move("startup.lua","disk")
+            fs.move("startup.lua","disk/startup.lua")
         end
     end
 end
