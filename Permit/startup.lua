@@ -2,7 +2,7 @@ monitors = {peripheral.find("monitor")}
 if monitors[1] == nil then
     mon = term
     function KBInput(screen)
-        return input()
+        return read()
     end
     function getKey()
         while true do
