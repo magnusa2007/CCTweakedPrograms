@@ -33,6 +33,10 @@ else
     end
 end
 
+disk = ""
+if fs.exists("disk") then
+    disk= "disk/"
+end
 
 l,h = mon.getSize()
 
@@ -142,7 +146,7 @@ function register()
 				write("Username is already in use!",1,4,"red")
 			else
 				users[reg.user] = hash(reg.password)
-				file = fs.open("users","w")
+				file = fs.open(disk.."users","w")
 				file.write(textutils.serialise(users))
 				file.close()
 				curentUser = reg.user
@@ -196,7 +200,7 @@ function newPermit()
 				permit["Admin Id"] = hash(curentUser)
 				
 				table.insert(permits,permit)
-				file = fs.open("permits","w")
+				file = fs.open(disk.."permits","w")
 				file.write(textutils.serialise(permits))
 				file.close()
                 printPermit(permit)
@@ -241,7 +245,7 @@ function listPermits()
             answer = KBInput(mon)
             if answer:lower() == "yes" then
 	            table.remove(permits,x+1)
-	            file = fs.open("permits","w")
+	            file = fs.open(disk.."permits","w")
 	            file.write(textutils.serialise(permits))
 	            file.close()
             end
@@ -317,7 +321,7 @@ function edituser()
 				answer = KBInput(mon)
 				if answer:lower() == "yes" then
 					users[userlist[x+1]]=nil
-					file = fs.open("users","w")
+					file = fs.open(disk.."users","w")
 					file.write(textutils.serialise(users))
 					file.close()
 					edituser()
@@ -373,15 +377,15 @@ function menu()
 	end
 end
 
-if fs.exists("users") then
-	users = textutils.unserialise(fs.open("users","rb").readAll())
+if fs.exists(disk.."users") then
+	users = textutils.unserialise(fs.open(disk.."users","rb").readAll())
 else
 	users = {}
 	register()
 end
 
-if fs.exists("permits") then
-	permits = textutils.unserialise(fs.open("permits","rb").readAll())
+if fs.exists(disk.."permits") then
+	permits = textutils.unserialise(fs.open(disk.."permits","rb").readAll())
 else
 	permits = {}
 end
