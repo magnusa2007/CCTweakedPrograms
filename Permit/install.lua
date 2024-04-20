@@ -38,6 +38,7 @@ for k,v in pairs(downloadlist) do
 end
 if list["Disk Drive"] then
     print("Move to Disk Drive?")
+    term.write("> ")
     if read() == "yes" then
         if fs.exists("keyboard.lua") then
             fs.move("keyboard.lua","disk/keyboard.lua")
@@ -51,6 +52,7 @@ if list["printer"] then
     print("Recomening adding a printer")
 end
 print("Start program?")
+term.write("> ")
 if read() == "yes" then
     os.reboot()
 end
