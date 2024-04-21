@@ -1,8 +1,8 @@
 monitors = {peripheral.find("monitor")}
 if monitors[1] == nil then
     mon = term
-    function KBInput(screen)
-        return read()
+    function KBInput(screen,lock)
+        return read(lock)
     end
     function getKey()
         while true do
@@ -84,7 +84,7 @@ function signin()
 	local reg= {user="",password=""}
 	while true do
 		write("Username:  "..reg.user.." ",1,2)
-		write("Password:  "..reg.password.." ",1,3)
+		write("Password:  "..string.rep("*",#reg.password).." ",1,3)
 		write(">",10,x+2,"yellow")
         write("",nil,nil,"white")
 		local key = getKey()
@@ -124,7 +124,7 @@ function register()
 	local reg= {user="",password=""}
 	while true do
 		write("Username:  "..reg.user.." ",1,2)
-		write("Password:  "..reg.password.." ",1,3)
+		write("Password:  "..string.rep("*",#reg.password).." ",1,3)
 		write(">",10,x+2,"yellow")
 		local key = getKey()
 		if #key==1 then
