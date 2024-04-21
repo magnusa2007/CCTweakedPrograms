@@ -63,8 +63,11 @@ function write(text,x,y,color,clear)
 	mon.write(text)
 end
 
-function center(text)
-		return string.rep(" ",(l-#text)/2)..text
+function center(text,with)
+		if with == nil then
+			with = l
+		end
+		return string.rep(" ",(with-#text)/2)..text
 end
 
 function hash(text)
@@ -306,11 +309,14 @@ function printPermit(permit)
         printer.write(text)
         pos=pos+1
     end
+	
     printer.newPage()
+	width,hight = printer.getPageSize()
     printer.setPageTitle("Sellers Permit")
-    line("Permit Holder: "..permit["Permit Holder"])
-    line("Permit Type: "..permit["Permit Type"])
-    line("Permit No: "..permit["Permit No"])
+	line(center("Sellers Permit",width))
+    line("Holder: "..permit["Permit Holder"])
+    line("Type: "..permit["Permit Type"])
+    line("No: "..permit["Permit No"])
     line("Auth No: "..permit["Auth No"])
     line("Issue Date: "..permit["Issue Date"])
     line("Issue Time: "..permit["Issue Time"])
