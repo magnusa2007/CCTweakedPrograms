@@ -83,7 +83,7 @@ function signin()
 	local x=0
 	local reg= {user="",password=""}
 	while true do
-		write("User    :  "..reg.user.." ",1,2)
+		write("Username:  "..reg.user.." ",1,2)
 		write("Password:  "..reg.password.." ",1,3)
 		write(">",10,x+2,"yellow")
         write("",nil,nil,"white")
@@ -163,24 +163,30 @@ function newPermit()
 	local permit= {}
 	permit["Permit Holder"] = ""
 	permit["Permit Type"] = ""
+	permit["Expiration"] = "" 
 	while true do
-		write("Permit Holder:  "..permit["Permit Holder"].." ",1,2)
-		write("Permit Type  :  "..permit["Permit Type"].." ",1,3)
-		write(">",15,x+2,"yellow")
+		write("Permit Holder  :  "..permit["Permit Holder"].." ",1,2)
+		write("Permit Type    :  "..permit["Permit Type"].." ",1,3)
+		write("Expiration Date:  "..permit["Expiration"].." Days",1,4)
+		write(">",17,x+2,"yellow")
 		local key = getKey()
 		if #key==1 then
 			if x ==0 then
 				permit["Permit Holder"]=permit["Permit Holder"]..key
-			else
+			elseif x == 1 then
 				permit["Permit Type"]=permit["Permit Type"]..key
+			else
+				permit["Expiration"]=permit["Expiration"]..key
 			end
 		elseif key == "up" or key == "down" then
-			x=(x+1)%2
+			x=(x+1)%3
 		elseif key == "backspace" then
 			if x ==0 then
 				permit["Permit Holder"]=permit["Permit Holder"]:sub(1,#permit["Permit Holder"]-1)
-			else
+			elseif x==1 then
 				permit["Permit Type"]=permit["Permit Type"]:sub(1,#permit["Permit Type"]-1)
+			else
+				permit["Expiration"]=permit["Expiration"]:sub(1,#permit["Expiration"]-1)
 			end
         elseif key == "esc" then
             return
@@ -195,9 +201,14 @@ function newPermit()
 			if not created then
 				permit["Permit No"] = ((hash(permit["Permit Type"])*hash(permit["Permit Holder"]))..""):sub(1, 9)
 				permit["Auth No"] = hash(permit["Permit Holder"]..permit["Permit Type"])
-				permit["Issue Date"] = os.date("%Y-%m-%d")
-				permit["Issue Time"] = os.date("%H:%M:%S")
+				permit["Issue Date"] = os.date("%Y-%m-%d",os.epoch("utc")/1000)
+				permit["Issue Time"] = os.date("%H:%M:%S",os.epoch("utc")/1000)
 				permit["Admin Id"] = hash(curentUser)
+				if permit["Expiration"] == "" then
+					permit["Expiration"] = "None"
+				else
+					permit["Expiration"] = os.date("%Y-%m-%d",os.epoch("utc")/1000+(86400*tonumber(permit["Expiration"])))
+				end
 				
 				table.insert(permits,permit)
 				file = fs.open(disk.."permits","w")
@@ -227,10 +238,16 @@ function listPermits()
         write("Auth No: "..permit["Auth No"],1,5,nil,true)
         write("Issue Date: "..permit["Issue Date"],1,6,nil,true)
         write("Issue Time: "..permit["Issue Time"],1,7,nil,true)
-        write("Admin Id: "..permit["Admin Id"],1,8,nil,true)
-        key = getKey()
-        write("",1,h,nil,true)
+		write("Expires: "..permit["Expiration"],1,8,nil,true)
+        write("Admin Id: "..permit["Admin Id"],1,9,nil,true)
+		write("",1,h,nil,true)
         write("",1,h-1,nil,true)
+		write("ESC/½ to exit",1,h-5,nil,true)
+		write("Enter to print, , e to edit",1,h-4,nil,true)
+		write("backspace to deletee to edit",1,h-3,nil,true)
+		write("e to edit",1,h-2,nil,true)
+        key = getKey()
+
         if key == "right" then
             x=x+1
         elseif key=="left" then
@@ -238,6 +255,12 @@ function listPermits()
         elseif key== "enter" then
             printPermit(permit)
             write("Permit printed!",1,h)
+		elseif key =="e" then
+			write("New Permit Holder",1,h-1)
+			write(">",1,h,"yellow")
+			write(" ",nil,nil,"white")
+			permits[x+1]["Permit Holder"] = KBInput(mon)
+			printPermit(permits[x])
         elseif key=="backspace" then
             write("Delete "..permit["Permit Type"].."?",1,h-1,"red")
             write(">",1,h,"yellow")
@@ -277,6 +300,7 @@ function printPermit(permit)
     line("Auth No: "..permit["Auth No"])
     line("Issue Date: "..permit["Issue Date"])
     line("Issue Time: "..permit["Issue Time"])
+	line("Expires : "..permit["Expiration"])
     line("Admin Id: "..permit["Admin Id"])
     printer.endPage()
 end
