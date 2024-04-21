@@ -8,7 +8,7 @@ if monitors[1] == nil then
         while true do
             event,key = os.pullEvent()
             if event=="char" then
-                if key =="½" then
+                if key =="q" then
                     return "esc"
                 else
                     return key
@@ -194,7 +194,7 @@ function newPermit()
 			created = false
 			for k,v in pairs(permits) do
 				if v["Permit Type"] == permit["Permit Type"] then
-					write("Permit is already created!",1,4,"red")
+					write("Permit is already created!",1,5,"red")
 					created=true
 				end
             end
@@ -229,6 +229,9 @@ function listPermits()
     while true do
         if #permits == 0 then
             newPermit()
+			if #permits == 0 then
+				return
+			end
         end
         permit=permits[x+1]
         write("Sellers Permit",1,2,nil,true)
@@ -243,8 +246,8 @@ function listPermits()
 		write("",1,h,nil,true)
         write("",1,h-1,nil,true)
 		write("ESC/½ to exit",1,h-5,nil,true)
-		write("Enter to print, , e to edit",1,h-4,nil,true)
-		write("backspace to deletee to edit",1,h-3,nil,true)
+		write("Enter to print",1,h-4,nil,true)
+		write("backspace to delete",1,h-3,nil,true)
 		write("e to edit",1,h-2,nil,true)
         key = getKey()
 
@@ -260,7 +263,11 @@ function listPermits()
 			write(">",1,h,"yellow")
 			write(" ",nil,nil,"white")
 			permits[x+1]["Permit Holder"] = KBInput(mon)
-			printPermit(permits[x])
+			print(permits[x+1]["Permit Holder"])
+			printPermit(permits[x+1])
+			file = fs.open(disk.."permits","w")
+			file.write(textutils.serialise(permits))
+			file.close()
         elseif key=="backspace" then
             write("Delete "..permit["Permit Type"].."?",1,h-1,"red")
             write(">",1,h,"yellow")
@@ -286,6 +293,13 @@ function printPermit(permit)
         os.sleep(1)
 		return
     end
+	if printer.getInkLevel() ==0 or printer.getPaperLevel() == 0 then
+		write(center("Check Paper and ink level"),1,h/2+1,"red",true)
+		write(center("Permit is saved"),1,h/2+2,"red",true)
+        os.sleep(1)
+		return
+	end
+	
     pos = 1
     function line(text)
         printer.setCursorPos(1, pos)
@@ -323,7 +337,7 @@ function edituser()
 			end
 		end
         if x+1<#userlist then
-            write("User Id: "..hash(userlist[x+1]),1,h)
+            write("User Id: "..hash(userlist[x+1]),1,h-2)
         else
             write("",1,h,nil,true)
         end
@@ -349,6 +363,9 @@ function edituser()
 					file.write(textutils.serialise(users))
 					file.close()
 					edituser()
+					if #users == 0 then
+						register() 
+					end
 					return
 				else
 					write("",1,h-1,nil,true)
@@ -405,6 +422,11 @@ if fs.exists(disk.."users") then
 	users = textutils.unserialise(fs.open(disk.."users","rb").readAll())
 else
 	users = {}
+	
+end
+needreg = true
+for k,v in pairs(users) do needreg = false end
+if needreg then
 	register()
 end
 
